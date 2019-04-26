@@ -1,0 +1,412 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color:rgb(76,190,231);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    
+}
+
+    div.part {
+        text-align: center;
+        vertical-align: central;
+        background-color: rgb(255,238,147);
+    }
+
+    div.help {
+        background-color: rgb(255,192,159);
+        overflow: auto;
+        display: none;
+        text-align: center;
+        border: 0.3vw solid rgb(163,163,128);
+        border-radius: 26px;
+    }
+
+    div.part {
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        margin: 0px auto;
+    }
+
+    div.settings {
+        background-color: rgb(255,192,159);
+        overflow: auto;
+        display: none;
+        text-align: center;
+        border: 0.3vw solid rgb(163,163,128);
+        border-radius: 2vw;
+    }
+
+    div.score {
+        background-color: rgb(255,192,159);
+        text-align: center;
+        border: 1px solid rgb(163,163,128);
+        padding: 0px;
+    }
+
+        div.score > p{ 
+            margin: 0px;
+        }
+
+    div.maxScore {
+        background-color: rgb(255,192,159);
+        text-align: center;
+        border: 1px solid rgb(163,163,128);
+       padding:0px;
+    }
+
+    div.maxScore >p {
+        margin: 0px;
+    }
+
+    form.settings {
+        border: none;
+    }
+
+    #windows {
+        margin: 0 auto;
+        padding: 12px 12px 12px 12px;
+        text-align: center;
+        vertical-align: central;
+        background-color: rgb(163,163,128);
+        z-index: -1;
+    }
+
+    h1 {
+        text-align: center;
+        vertical-align: middle;
+        padding: 13px;
+        font-size: 36px;
+        color: gray;
+    }
+    p.helpText {
+        text-indent: 2rem;
+        font-family: AcadEref;
+        line-height: 200%;
+        padding: 10px;
+    }
+     a {
+        text-decoration: none;
+        background-color: rgb(226,219,190);
+       font-size: 1.5em;
+       padding: 16px;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 6vw 6vw;
+    }
+        a:link {
+            color: rgb(226,219,190);
+            background-color: white;
+            border: 2px solid rgb(226,219,190);
+        }
+
+        a:hover {
+            color: rgb(255,238,147);
+            background-color: white;
+            border: 2px solid rgb(226,219,190);
+        }
+
+    button {
+        background: rgb(226,219,190);
+        font-size: 1.5em;
+        padding: 16px;
+        color: white;
+        border-radius:10px;
+        border: none;
+        outline: 5vw;
+    }
+
+        button:link {
+            color: rgb(255,238,147);
+            background-color: white;
+            border: 2px solid rgb(255,238,147);
+        }
+
+        button:hover {
+            color: rgb(255,238,147);
+            background-color: white;
+            border: 2px solid rgb(255,238,147);
+        }
+
+    p.formTitle {
+        font-size: 2vw;
+    }
+    b {
+        text-align: center;
+        left: 50%;
+        right: 50%;
+    }
+div.button {
+    margin-top: 12vw;
+}
+.finish1{
+    position:absolute;
+    top:70%;
+    left:50.7%;
+    transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+   display:none;
+    z-index:10;
+   
+}
+.finish2{
+    position:absolute;
+    top:70%;
+    left:50.7%;
+    transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+   display:none;
+    z-index:10;
+   
+}
+  .excellent{
+        width:400px;
+        height:400px;
+        position:absolute;
+    top:40%;
+    left:50.7%;
+    transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    display:none;
+}
+    .fault{
+        width:300px;
+        height:300px;
+        position:absolute;
+    top:40%;
+    left:50.7%;
+    transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    display:none;
+}
+@media screen and (min-width:1300px) {
+    div.help {
+        position: absolute;
+        top: 10vw;
+        left: 2%;
+        width: 25%;
+        height: 30vw;
+    }
+
+    div.settings {
+        position: absolute;
+        float: right;
+        top: 26vw;
+        right: 2%;
+        width: 25%;
+        height: 15vw;
+    }
+
+    .start {
+        position: absolute;
+        top: 3vw;
+        left: 60vw;
+        float: left;
+    }
+
+    .setting {
+        position: absolute;
+        top: 3vw;
+        right: 15vw;
+        float: left;
+    }
+
+    div.part {
+        text-align: center;
+        vertical-align: central;
+        width: 22%;
+        height: 6.6vw;
+        line-height: 6.6vw;
+        margin: 1.5%;
+        float: left;
+        text-align: center;
+        background-color: rgb(255,238,147);
+        border-radius: 1.4vw;
+        font-size: 2.5vw;
+        font-weight: bolder;
+    }
+
+    #windows {
+        margin: 0 auto;
+        width: 30%;
+        height: 30vw;
+        padding: 12px 12px 12px 12px;
+        text-align: center;
+        vertical-align: central;
+        background-color: rgb(163,163,128);
+        z-index: -1;
+        border-radius: 2vw;
+    }
+
+    div.score {
+        float: left;
+        position: absolute;
+        top: 8px;
+        left: 2%;
+        width: 9%;
+        height: 6vw;
+        border-radius: 2vw;
+        font-size: 1.5vw;
+    }
+
+    div.maxScore {
+        float: left;
+        position: absolute;
+        top: 8px;
+        left: 20%;
+        width: 9%;
+        height: 6vw;
+        border-radius: 2vw;
+        font-size: 1.5vw;
+    }
+
+    div.button {
+        text-align: center;
+        margin: 2vw;
+        padding: 1vw 1vw;
+        vertical-align: middle;
+    }
+
+    button.menu {
+        padding: 1vw;
+        margin: 1vw;
+    }
+
+    .enter {
+        position: absolute;
+        top: 15%;
+        right: 2%;
+    }
+
+    #form {
+        width: 25%;
+        height: 30vw;
+    }
+
+    .finish1 {
+        top: 70%;
+    }
+    .finish2 {
+        top: 70%;
+    }
+}
+
+    @media screen and (max-width:1300px) {
+         #windows {
+            margin: 0px auto;
+            margin-top:20px;
+            width: 390px;
+            height:390px;
+            padding: 12px 12px 12px 12px;
+            text-align: center;
+            vertical-align: central;
+            background-color: rgb(163,163,128);
+            z-index: -1;
+            border-radius: 26px;
+        }
+         div.help {
+             margin:10px auto;
+             margin-top:40px;
+            top: 900px;
+            width: 390px;
+            height:390px;
+        }
+          div.settings {
+             margin:30px auto;
+            top: 700px;
+            width: 390px;
+            height:180px;
+            text-align:center;
+            border-radius:16px;
+        }
+         div.score {
+        float: left;
+        position: absolute;
+        top: 10px;
+        left:7px;
+        width:80px;
+        height:50px;
+        border-radius:12px;
+    }
+    div.maxScore {
+        float: left;
+        position: absolute;
+        top: 10px;
+        left:120px;
+        width:80px;
+        height:50px;
+         border-radius:12px;
+    }
+     div.starts {
+            text-align: center;
+            margin: 2vw;
+        }
+        .start {
+             margin:30px;
+             margin: 3vw 3vw;
+        }
+
+        .setting {
+            margin: 30px;
+            margin: 3vw 3vw;
+        }
+
+        div.part {
+            text-align: center;
+            vertical-align: central;
+            width: 85.8px;
+            height:85.8px;
+            line-height: 85.8px;
+            margin: 5.8px;
+            float: left;
+            text-align: center;
+            background-color: rgb(255,238,147);
+            border-radius:18.2px;
+             font-size: 32.5px;
+            font-weight:bolder;
+        }
+        div.button {
+            text-align: center;
+            margin: 2vw;
+            padding: 1vw 1vw;
+            vertical-align: middle;
+        }
+
+        button.menu {
+            padding: 1vw;
+            margin: 1vw;
+        }
+
+        .enter {
+            position: absolute;
+            top: 15%;
+            right: 2%;
+        }
+
+        #form {
+            width: 25%;
+            height: 30vw;
+        }
+        .finish1 {
+             top:90%;
+        }
+        .finish2 {
+             top:90%;
+        }
+        .excellent {
+            top: 57%;
+        }
+        .fault {
+            top: 57%;
+        }
+    }

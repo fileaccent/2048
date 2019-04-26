@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>2048小游戏</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <script src="jquery.js"></script>
+    <script src="ways.js"></script>
+    <script src="jquery.animate-colors.js"></script>
+    <script src="right.js"></script>
+    <script src="left.js"></script>
+    <script src="down.js"></script>
+    <script src="up.js"></script>
+    <script>
+        $(document).ready(function () {//弹出帮助的选择框
+            $("a.playway").click(function () {
+                $("div.help").toggle(400);
+            });
+        });
+        $(document).ready(function () {//弹出设置
+            $("button.setting").click(function () {
+                $("div.settings").toggle(400);
+            });
+        });
+        function num() {
+            var seq, c, a1, a2;
+            for (i = 0; i < 16; i++) $(".part ").eq(i).text(null);
+            for (seq = 0; seq < 2; seq++) {
+                do {
+                    i = Math.round(Math.random() * 3);
+                    j = Math.round(Math.random() * 3);
+                } while (a1 == i || a2 == j);
+                num = 4 - Math.round(Math.random()) * 2;
+                $(".part ").eq(i * 4 + j).text(num);
+                a1 = i;
+                a2 = j;
+                $("div.part").eq(i * 4 + j).animate({backgroundColor:'rgb(255,192,159)'});
+                 $("div.part").eq(i * 4 + j).animate({ backgroundColor: 'rgb(255, 238, 147)'});
+            }
+        }
+    </script>
+    <body onload="num()"><!---->
+       
+        <div> 
+            <button class="finish1">重新开始</button><button class="finish2">重新开始</button>
+            <img src="excellent.png" class="excellent"/>
+            <img src="fault.jpg" class="fault"/>
+        <h1>2048</h1> 
+        <div class="starts"><button class="start">开始游戏</button> <button class="setting">设置</button></div>
+            </div>
+        <div id="windows">
+            <div class="part">4</div>
+            <div class="part">8</div>
+            <div class="part">4</div>
+            <div class="part">2</div>
+            <div class="part">8</div>
+            <div class="part">16</div>
+            <div class="part">2</div>
+            <div class="part">8</div>
+            <div class="part">2</div>
+            <div class="part">8</div>
+            <div class="part">64</div>
+            <div class="part">2</div>
+            <div class="part">4</div>
+            <div class="part">2</div>
+            <div class="part">16</div>
+            <div class="part">128</div>
+        </div> 
+        <br />
+        <div class="button"><a class="hint" >提示</a><a class="playway">游戏玩法</a></div>
+        <div class="settings">
+            <form>
+                    <p class="formTitle">设置</p>
+                    <label for="buttonVideo">按键声音音量</label>
+                    <input id="buttonVideo" type="range" /><br />
+                    <label for="backgroundVideo">背景音乐声音大小</label>
+                    <input id="backgroundVideo" type="range" />
+            </form>
+        </div>
+        <div class="help">
+            <br />
+            <b>帮助:</b>
+            <p class="helpText">每次可以选择上下左右其中一个方向去滑动，每滑动一次，
+            所有的数字方块都会往滑动的方向靠拢外，系统也会在空白
+            的地方乱数出现一个数字方块，相同数字的方块在靠拢、相
+            撞时会相加。不断的叠加最终拼凑出2048这个数字就算成功。
+             </p>
+            <b>操作方法:</b>
+                <p>用w,s,a,d键控制上下左右。</p>
+        </div>
+        <div class="score">
+                <p>得分:</p>
+                <p>1</p>
+            </div>
+            <div class="maxScore">
+             <p>最高得分</p>
+            <p>1</p>
+             </div>
+            
+       
+        
+     <!--   <div id="enter">
+            <form id="form">
+                <fieldset>
+                    <legend>用户登录</legend>
+                    <label for="name">用户名:</label>
+                    <input id="name" type="text"/>
+                    <label for="password">密码:</label>
+                    <input id="password" type="password" />
+                    <button>用户注册</button><button>忘记密码</button>
+                </fieldset>
+            </form>
+
+        </div>-->
+    </body>
+</html>
