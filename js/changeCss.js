@@ -33,9 +33,9 @@ if(browser.versions.mobile || browser.versions.ios || browser.versions.android |
  
 function cssChange(){
     var link = document.getElementsByTagName('link')[0];
-    //PC端应用的样式文件：style_A.css
+    //PC端应用的样式文件：style.css
     alert('当前应用样式文件是：'+link.getAttribute('href'));
-    link.setAttribute('href','style_B.css');
+    link.setAttribute('href','styleMobile.css');
     //Mobile端应用样式文件：style_B.css
     alert('当前应用样式文件是：'+link.getAttribute('href'));
 }
