@@ -4,17 +4,17 @@
         <title>2048小游戏</title>
         <meta charset="utf-8" />
        
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
+        <link rel="stylesheet" type="text/css" href="style/style.css" /> 
         <link rel="stylesheet" href="style/style1.css"/>
     </head>
-    <script src="jquery.js"></script>
-    <script src="way.js"></script>
-    <script src="jquery.animate-colors.js"></script>
-    <script src="right.js"></script>
-    <script src="left.js"></script>
-    <script src="down.js"></script>
-    <script src="up.js"></script>
-    <script src="swapCss.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/way.js"></script>
+    <script src="js/jquery.animate-colors.js"></script>
+    <script src="js/right.js"></script>
+    <script src="js/left.js"></script>
+    <script src="js/down.js"></script>
+    <script src="js/up.js"></script>
+    <script src="js/swapCss.js"></script>
 
     <script>
         $(document).ready(function () {//弹出帮助的选择框
@@ -57,8 +57,8 @@
        
         <div> 
             <button class="finish1">重新开始</button><button class="finish2">重新开始</button>
-            <img src="excellent.png" class="excellent"/>
-            <img src="fault.jpg" class="fault"/>
+            <img src="images\excellent.png" class="excellent"/>
+            <img src="images\fault.jpg" class="fault"/>
         <h1>2048</h1> 
         <div class="starts"><button class="start">开始游戏</button> <button class="setting">设置</button></div>
             <div id="extraSetting">
@@ -107,8 +107,6 @@
         </div> 
         <br />
         <div class="button"><a class="hint" >提示</a><a class="playway">游戏玩法</a></div>
-     <!--   <div id="touch"><img id="touchLeft" src="left.jpg"/><img id="touchRight" src="right.jpg"/><img id="touchUp" src="touchUp"/></div>-->
-     
         <div class="settings">
             <form>
                     <p class="formTitle">设置</p>
@@ -116,8 +114,8 @@
                 <input id="moveMusicValue" type="range" min="0" max="100" value="50" onchange="setMoveMusicValue()"/><span id="showMoveMusicValue">50</span>
                       <br /><br />
                     <audio id="moveMusic"controls="controls" style="display:none;">
-                        <source src="move.ogg" type="auto/ogg" />
-                        <source src="move.mp3" type="audio/mpeg" />
+                        <source src="music/move.ogg" type="auto/ogg" />
+                        <source src="music/move.mp3" type="audio/mpeg" />
                     </audio>
                 <br />
                     <label for="backgroundMusicValue">背景音乐音量</label>
@@ -126,8 +124,8 @@
                  <a id="setStartPause" onclick="startPause()" >打开背景音乐</a>
                 
         <audio id="backgroundMusic" controls loop="loop" style="display:none;">
-           <source src="backgroundMusic.mp3" type="audio/mpeg">
-           <source src="backgroundMusic.ogg" type="audio/ogg">
+           <source src="music/backgroundMusic.mp3" type="audio/mpeg">
+           <source src="music/backgroundMusic.ogg" type="audio/ogg">
             您的浏览器不支持 audio 元素。
         </audio>
             </form>
@@ -147,10 +145,10 @@
 	<div class="float-menu">
 		<div class="plus"><div class="cross"></div></div>
 		<div class="menu-list">
-			<a onclick="up();check();" class="turnUp"><img style="width:30px; height:30px;"src="up.jpg" /></a>
-			<a onclick="left();check();" class="turnLeft"><img style="width:30px; height:30px;"src="left.jpg" /></a>
-			<a onclick="down();check();" class="turnDown"><img style="width:30px; height:30px;"src="down.jpg" /></a>
-            <a onclick="right();check();" class="turnRight"><img style="width:30px; height:30px;"src="right.jpg" /></a>
+			<a onclick="up();check();" class="turnUp"><img style="width:30px; height:30px;"src="images/up.jpg" /></a>
+			<a onclick="left();check();" class="turnLeft"><img style="width:30px; height:30px;"src="images/left.jpg" /></a>
+			<a onclick="down();check();" class="turnDown"><img style="width:30px; height:30px;"src="images/down.jpg" /></a>
+            <a onclick="right();check();" class="turnRight"><img style="width:30px; height:30px;"src="images/right.jpg" /></a>
 		</div>
 	</div>
 	<!-- 代码部分end -->

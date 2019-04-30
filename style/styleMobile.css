@@ -1,0 +1,446 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color:rgb(76,190,231);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    
+}
+
+    div.part {
+        text-align: center;
+        vertical-align: central;
+        background-color: rgb(255,238,147);
+        z-index:10;
+    }
+    /*div.part1 {
+        text-align: center;
+        vertical-align: central;
+        background-color: rgb(240,240,240);
+    }*/ 
+    div.help {
+        background-color: rgb(255,192,159);
+        overflow: auto;
+        display: none;
+        text-align: center;
+        border: 0.3vw solid rgb(163,163,128);
+        border-radius: 26px;
+    }
+
+    div.part {
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        margin: 0px auto;
+    }
+    /*div.part1 {
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        margin: 0px auto;
+    }*/ 
+    div.settings {
+        background-color: rgb(255,192,159);
+        overflow: auto;
+        display: none;
+        text-align: center;
+        border: 0.3vw solid rgb(163,163,128);
+        border-radius: 2vw;
+    }
+
+    div.score {
+        background-color: rgb(224,211,191);
+        text-align: center;
+        border: 1px solid rgb(224,211,191);
+        padding: 0px;
+        color:rgb(13,23,64);
+        font-weight:bolder;
+        padding-top:0px;
+       padding-left:30px;
+        padding-right:30px;
+    }
+        div.score p:first-child {
+            padding-top: 0px;
+        }
+  #gameTime {
+        background-color: rgb(224,211,191);
+        text-align: center;
+        border: 1px solid rgb(224,211,191);
+        padding: 0px;
+        color:rgb(13,23,64);
+        font-weight:bolder;
+        padding-top:0px;
+       padding-left:10px;
+        padding-right:10px;
+    }
+        #gameTime p:first-child {
+            padding-top: 0px;
+        }
+          #roundNum {
+        background-color: rgb(224,211,191);
+        text-align: center;
+        border: 1px solid rgb(224,211,191);
+        padding: 0px;
+        color:rgb(13,23,64);
+        font-weight:bolder;
+        padding-top:0px;
+       padding-left:10px;
+        padding-right:10px;
+    }
+        #roundNum p:first-child {
+            padding-top: 0px;
+        }
+          #roundTime {
+        background-color: rgb(224,211,191);
+        text-align: center;
+        border: 1px solid rgb(224,211,191);
+        padding: 0px;
+        color:rgb(13,23,64);
+        font-weight:bolder;
+        padding-top:0px;
+       padding-left:10px;
+        padding-right:10px;
+    }
+        #roundTime p:first-child {
+            padding-top: 0px;
+        }
+    div.maxScore {
+       background-color: rgb(224,211,191);
+        text-align: center;
+        border: 1px solid rgb(224,211,191);
+        padding:0;
+        color:rgb(13,23,64);
+        font-weight:bolder;
+         padding-top:0px;
+        padding-left:7px;
+        padding-right:7px;
+    }
+    div.maxScore p:first-child {
+            padding-top: 0px;
+        }
+    form.settings {
+        border: none;
+    }
+
+    #windows {
+        margin: 0 auto;
+        padding: 12px 12px 12px 12px;
+        text-align: center;
+        vertical-align: central;
+        background-color: rgb(163,163,128);
+        z-index: -1;
+    }
+
+    h1 {
+        text-align: center;
+        vertical-align: middle;
+        color: gray;
+    }
+    p.helpText {
+        text-indent: 2rem;
+        font-family: AcadEref;
+        line-height: 200%;
+        padding: 10px;
+    }
+    div.button a {
+        text-decoration: none;
+        background-color: rgb(226,219,190);
+       font-size: 1.5em;
+       padding: 16px;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 6vw 6vw;
+    }
+    div.button    a:link {
+            color: rgb(226,219,190);
+            background-color: white;
+            border: 2px solid rgb(226,219,190);
+        }
+
+     div.button   a:hover {
+            color: rgb(255,238,147);
+            background-color: white;
+            border: 2px solid rgb(226,219,190);
+        }
+
+    button {
+        background: rgb(226,219,190);
+        font-size: 1.5em;
+        padding: 16px;
+        color: white;
+        border-radius:10px;
+        border: none;
+        outline: 5vw;
+    }
+
+        button:link {
+            color: rgb(255,238,147);
+            background-color: white;
+            border: 2px solid rgb(255,238,147);
+        }
+
+        button:hover {
+            color: rgb(255,238,147);
+            background-color: white;
+            border: 2px solid rgb(255,238,147);
+        }
+
+    p.formTitle {
+        font-size: 2vw;
+    }
+    b {
+        text-align: center;
+        left: 50%;
+        right: 50%;
+    }
+div.button {
+    margin-top: 2vw;
+}
+.finish1{
+    position:absolute;
+    top:70%;
+    left:50.7%;
+    transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+  display:none;
+    z-index:10;
+   
+}
+.finish2{
+    position:absolute;
+    top:70%;
+    left:50.7%;
+    transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+ display:none;
+    z-index:10;
+   
+}
+  .excellent{
+        width:400px;
+        height:400px;
+        position:absolute;
+    top:23vw;
+    left:50.7%;
+    transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+ display:none;
+}
+    .fault{
+        width:300px;
+        height:300px;
+        position:absolute;
+    top:23vw;
+    left:50.7%;
+    transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+ display:none;
+}
+    /*设置range的样式*/
+    input[type="range"] {
+    -webkit-appearance: none; /*去除默认样式*/
+    margin-top: 42px;
+    background-color: rgb(163,163,128);
+    /*border-radius: 15px;*/
+    width: 40% !important;
+   -webkit-appearance: none;
+    height:4px;
+   padding: 0;
+   border: none;
+  outline:none;
+   /*input的长度为80%，margin-left的长度为10%*/
+ }
+        input[type="range"].backgroundMusicValue {
+            width: 20% !important;
+        }
+ input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;/*去除默认样式*/
+   cursor: default;
+   top: 0;
+  height: 20px;
+   width: 20px;
+   transform: translateY(0px);
+  /*background: none repeat scroll 0 0 #5891f5;*/
+   background: white;
+   border-radius: 25px;
+   border:5px solid rgb(226,219,190);
+   /*-webkit-box-shadow: 0 -1px 1px #fc7701 inset;*/
+ }
+#setStartPause {
+    font-size: 18px;
+}
+p.formTitle {
+    font-size: 20px;
+}
+ #windows {
+            margin: 0px auto;
+            margin-top:20px;
+            width: 390px;
+            height:390px;
+            padding: 12px 12px 12px 12px;
+            text-align: center;
+            vertical-align: central;
+            background-color: rgb(163,163,128);
+            z-index: -1;
+            border-radius: 26px;
+        }
+         div.help {
+             margin:10px auto;
+             margin-top:40px;
+            top: 900px;
+            width: 390px;
+            height:450px;
+        }
+         div.settings {
+             margin:30px auto;
+             margin-top:100px;
+            top: 700px;
+            width: 390px;
+            height:370px;
+            text-align:center;
+            border-radius:16px;
+        }
+         div.score {
+        float: left;
+        position: absolute;
+        top: 2vw;left:1vw;
+        padding:0;
+        border-radius:2vw;
+        font-size:3vw; 
+        padding-left:2vw;
+        padding-right:2vw;
+        
+    }
+    #extraSetting {
+       text-align:center;
+    }
+         #roundNum {
+      margin:0 auto;
+        max-width:100px;
+        max-height:120px;
+         border-radius:20px;
+        font-size:24px; 
+         padding:0;
+    }
+     #roundTime{
+       position:absolute;
+        right:50%;
+        transform:translate(200%,0);
+    -o-transform:translate(200%,0);
+    -moz-transform:translate(200%,0);
+    -webkit-transform:translate(200%,0);
+        max-width:100px;
+        max-height:120px;
+         border-radius:20px;
+        font-size:24px; 
+         padding:0;
+    }
+     #gameTime{
+        position:absolute;
+        left:50%;
+        transform:translate(-200%,0);
+    -o-transform:translate(-200%,0);
+    -moz-transform:translate(-200%,0);
+    -webkit-transform:translate(-200%,0);
+        max-width:100px;
+        max-height:120px;
+         border-radius:20px;
+        font-size:24px; 
+         padding:0;
+    }
+            div.score p:first-child {
+                padding-top: 0px;
+            }
+    div.maxScore {
+        float: left;
+        position: absolute;
+        top: 2vw;left:15vw;
+        padding-top:0.5vw;
+         border-radius:2vw;
+        font-size:3vw; 
+         padding:0;
+    }
+    div.maxScore p:first-child {
+                padding-top: 0px;
+            }
+     div.starts {
+            text-align: center;
+            margin: 2vw;
+        }
+        .start {
+             margin:30px;
+             margin: 3vw 3vw;
+        }
+
+        .setting {
+            margin: 30px;
+            margin: 3vw 3vw;
+        }
+
+        div.part {
+            text-align: center;
+            vertical-align: central;
+            width: 85.8px;
+            height:85.8px;
+            line-height: 85.8px;
+            margin: 5.8px;
+            float: left;
+            text-align: center;
+            border-radius:18.2px;
+             font-size: 32.5px;
+            font-weight:bolder;
+        }
+           div.part1 {
+            text-align: center;
+            vertical-align: central;
+            width: 85.8px;
+            height:85.8px;
+            line-height: 85.8px;
+            margin: 5.8px;
+            float: left;
+            text-align: center;
+            border-radius:18.2px;
+             font-size: 32.5px;
+            font-weight:bolder;
+        }
+        div.button {
+           text-align:center;
+            padding: 1vw 1vw;
+           
+        }
+        button.menu {
+            padding: 1vw;
+            margin: 1vw;
+        }
+
+        .enter {
+            position: absolute;
+            top: 15%;
+            right: 2%;
+        }
+
+        #form {
+            width: 25%;
+            height: 30vw;
+        }
+         .finish1 {
+             top:700px;
+        }
+        .finish2 {
+             top:700px;
+        }
+        .excellent {
+            top: 500px;
+        }
+        .fault {
+            top: 500px;
+        }
