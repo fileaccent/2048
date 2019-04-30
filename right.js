@@ -7,39 +7,21 @@ function right() {
             if ($("div.part").eq(i * 4 + z).text() == "" || $("div.part").eq(i * 4 + z).text() == null)
                 q++;
         if (q == 4) continue;
-        j = 3;
+        j = 3; var used = new Array("0", "0", "0", "0");
         while (j >= 0) {
-            // alert("i=" + i); 
-            if (output == 1) break;
             for (; $("div.part").eq(i * 4 + j).text() == "" || $("div.part").eq(i * 4 + j).text() == null; j--) if (j > 3 || j < 0) break; p = j; if (j > 3 || j < 0) break;//alert("p=" + p);
             j--; if (j >3||j<0) break;
             for (; $("div.part").eq(i * 4 + j).text() == "" || $("div.part").eq(i * 4 + j).text() == null; j--) if (j > 3 || j < 0) break; if (j > 3 || j < 0) break;
-            if ($("div.part").eq(i * 4 + j).text() == $("div.part").eq(i * 4 + p).text()) {
-                $("div.part").eq(i * 4 + j).text($("div.part").eq(i * 4 + j).text() * 2); //alert("j="+j+" "+$("div.part").eq(i * 4 + j).text());
+            if ($("div.part").eq(i * 4 + j).text() == $("div.part").eq(i * 4 + p).text() && used[j] == 0 && used[p] == 0) {
+                $("div.part").eq(i * 4 + j).text($("div.part").eq(i * 4 + j).text() * 2); num1 = Number($("div.score p").eq(1).text()) + Number($("div.part").eq(i * 4 + j).text()); $("div.score>p").eq(1).text(num1);
                 $("div.part").eq(i * 4 + p).text("");
-                output = 1; break; sequare++;
+                used[j] = 1; used[p] = 1;
+                output = 1; sequare++;
             }
             j = p - 1;// alert("j3=" + j);
             if (j < 0 || j > 3) break;
            
         }
-      
-        j = 0;
-        while (j <= 3) {
-            //alert("i=" + i);
-            if (output == 1) break;
-            for (; $("div.part").eq(i * 4 + j).text() == "" || $("div.part").eq(i * 4 + j).text() == null; j++) if (j > 3 || j < 0) break; p = j; if (j > 3 || j < 0) break;//alert("p=" + p); 
-            j++; if (j > 3 || j < 0) break;
-            for (; $("div.part").eq(i * 4 + j).text() == "" || $("div.part").eq(i * 4 + j).text() == null; j++) if (j > 3 || j < 0) break; if (j > 3 || j < 0) break;
-            if ($("div.part").eq(i * 4 + j).text() == $("div.part").eq(i * 4 + p).text()) {
-                $("div.part").eq(i * 4 + j).text($("div.part").eq(i * 4 + j).text() * 2);// alert("j="+j+" "+$("div.part").eq(i * 4 + j).text());
-                $("div.part").eq(i * 4 + p).text("");
-                output = 1; break; square++;
-            }
-            j = p + 1;// alert("j3=" + j);
-            if (j > 3 || j < 0) break;
-        }
-        
         for (j = 0; j < 4; j++) {
             c = $("div.part").eq(i * 4 + j).text();                                                                                                          // alert("c=" + c);
             if (!c == "" || c == null)                                                                                                                       //alert("i="+i);
@@ -52,8 +34,7 @@ function right() {
                     //alert($("div.part").eq(i * 4 + d).html());
                     $("div.part").eq(i * 4 + 3 - k).html($("div.part").eq(i * 4 + d).html());
                     $("div.part").eq(i * 4 + d).html("");
-                    $("div.part").eq(i * 4 +3 - k ).animate({backgroundColor:'rgb(255,192,159)'});
-                    $("div.part").eq(i * 4 + 3 - k).animate({ backgroundColor: 'rgb(255, 238, 147)'});
+                   
                     sequare++;
                     k++;
                 } //if c结束
@@ -67,8 +48,8 @@ function right() {
                 if (!c == "" || c == null) {
                     $("div.part").eq(i * 4 + m).html($("div.part").eq(i * 4 + d).html());
                     $("div.part").eq(i * 4 + d).html("");//alert($("div.part").eq(i * 4 +3-k ).html())
-                    $("div.part").eq(i * 4 + m).animate({ backgroundColor: 'rgb(255,192,159)' });
-                    $("div.part").eq(i * 4 + m).animate({ backgroundColor: 'rgb(255, 238, 147)' });
+                  
+                    
                     sequare++;
                 }//if c结束
             }//for k d结束
@@ -85,6 +66,8 @@ function right() {
         $("div.part").eq(i * 4 + j).text(num);
         $("div.part").eq(i * 4 + j).animate({ backgroundColor: 'rgb(255,192,159)' });
         $("div.part").eq(i * 4 + j).animate({ backgroundColor: 'rgb(255, 238, 147)' });
+        round++;
+        clearRoundTime(); setRoundTime();
     }
     return 0;
 }//right结束

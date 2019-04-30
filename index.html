@@ -1,16 +1,21 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>2048小游戏</title>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta charset="utf-8" />
+       
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+        <link rel="stylesheet" href="style/style1.css"/>
     </head>
     <script src="jquery.js"></script>
-    <script src="ways.js"></script>
+    <script src="way.js"></script>
     <script src="jquery.animate-colors.js"></script>
     <script src="right.js"></script>
     <script src="left.js"></script>
     <script src="down.js"></script>
     <script src="up.js"></script>
+    <script src="swapCss.js"></script>
+
     <script>
         $(document).ready(function () {//弹出帮助的选择框
             $("a.playway").click(function () {
@@ -34,9 +39,18 @@
                 $(".part ").eq(i * 4 + j).text(num);
                 a1 = i;
                 a2 = j;
-                $("div.part").eq(i * 4 + j).animate({backgroundColor:'rgb(255,192,159)'});
-                 $("div.part").eq(i * 4 + j).animate({ backgroundColor: 'rgb(255, 238, 147)'});
-            }
+                $("div.part").eq(i * 4 + j).animate({ backgroundColor: 'rgb(255,238,147)' });  
+            } $("div.score p").eq(1).text("0");
+            clearGameTime(); setGameTime();
+            clearRoundTime(); setRoundTime();
+
+        }
+        if (document.querySelector(".float-menu")) {
+            var plus = document.querySelector(".plus");
+            var floatMenu = document.querySelector(".float-menu");
+            plus.addEventListener("click", function () {
+                floatMenu.className.indexOf("open") > -1 ? floatMenu.className = "float-menu" : floatMenu.className = "float-menu open";
+            }, false);
         }
     </script>
     <body onload="num()"><!---->
@@ -47,34 +61,75 @@
             <img src="fault.jpg" class="fault"/>
         <h1>2048</h1> 
         <div class="starts"><button class="start">开始游戏</button> <button class="setting">设置</button></div>
+            <div id="extraSetting">
+                <div id="gameTime">
+                    <p>游戏时长</p>
+                    <p id="gameTimeValue">0</p>
+                </div> 
+                <div id="roundTime">
+                <p>回合时间</p>
+                <p id="roundTimeValue">0</p>
+                </div>
+                <div id="roundNum">
+                <p>回合数</p>
+                <p id="roundNumValue">0</p>
+                </div>
+               
+
+            </div>
+            
+            <div class="score">
+         <p>得分:</p>
+          <p>0</p>      
+            </div> 
+            <div class="maxScore">
+             <p>最高得分</p>
+            <p>0</p>
+             </div>
             </div>
         <div id="windows">
-            <div class="part">4</div>
-            <div class="part">8</div>
-            <div class="part">4</div>
-            <div class="part">2</div>
-            <div class="part">8</div>
-            <div class="part">16</div>
-            <div class="part">2</div>
-            <div class="part">8</div>
-            <div class="part">2</div>
-            <div class="part">8</div>
-            <div class="part">64</div>
-            <div class="part">2</div>
-            <div class="part">4</div>
-            <div class="part">2</div>
-            <div class="part">16</div>
-            <div class="part">128</div>
+             <div class="part"></div>
+             <div class="part"></div>
+             <div class="part"></div>
+             <div class="part"></div>
+             <div class="part"></div>
+             <div class="part"></div>
+             <div class="part"></div>
+             <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
         </div> 
         <br />
         <div class="button"><a class="hint" >提示</a><a class="playway">游戏玩法</a></div>
+     <!--   <div id="touch"><img id="touchLeft" src="left.jpg"/><img id="touchRight" src="right.jpg"/><img id="touchUp" src="touchUp"/></div>-->
+     
         <div class="settings">
             <form>
                     <p class="formTitle">设置</p>
-                    <label for="buttonVideo">按键声音音量</label>
-                    <input id="buttonVideo" type="range" /><br />
-                    <label for="backgroundVideo">背景音乐声音大小</label>
-                    <input id="backgroundVideo" type="range" />
+                    <label for="moveMusicValue">按键声音音量</label>
+                <input id="moveMusicValue" type="range" min="0" max="100" value="50" onchange="setMoveMusicValue()"/><span id="showMoveMusicValue">50</span>
+                      <br /><br />
+                    <audio id="moveMusic"controls="controls" style="display:none;">
+                        <source src="move.ogg" type="auto/ogg" />
+                        <source src="move.mp3" type="audio/mpeg" />
+                    </audio>
+                <br />
+                    <label for="backgroundMusicValue">背景音乐音量</label>
+                 <input id="backgroundMusicValue" type="range" min="0" max="100" value="50" onchange="setBackgroundMusicValue()"/><span id="showBackgroundMusicValue">50</span>
+                <br /><br /><br /><br />
+                 <a id="setStartPause" onclick="startPause()" >打开背景音乐</a>
+                
+        <audio id="backgroundMusic" controls loop="loop" style="display:none;">
+           <source src="backgroundMusic.mp3" type="audio/mpeg">
+           <source src="backgroundMusic.ogg" type="audio/ogg">
+            您的浏览器不支持 audio 元素。
+        </audio>
             </form>
         </div>
         <div class="help">
@@ -86,31 +141,27 @@
             撞时会相加。不断的叠加最终拼凑出2048这个数字就算成功。
              </p>
             <b>操作方法:</b>
-                <p>用w,s,a,d键控制上下左右。</p>
+                <p>用w,s,a,d键,悬浮窗控制上下左右。</p>
         </div>
-        <div class="score">
-                <p>得分:</p>
-                <p>1</p>
-            </div>
-            <div class="maxScore">
-             <p>最高得分</p>
-            <p>1</p>
-             </div>
-            
-       
-        
-     <!--   <div id="enter">
-            <form id="form">
-                <fieldset>
-                    <legend>用户登录</legend>
-                    <label for="name">用户名:</label>
-                    <input id="name" type="text"/>
-                    <label for="password">密码:</label>
-                    <input id="password" type="password" />
-                    <button>用户注册</button><button>忘记密码</button>
-                </fieldset>
-            </form>
-
-        </div>-->
+          <!-- 代码部分begin -->
+	<div class="float-menu">
+		<div class="plus"><div class="cross"></div></div>
+		<div class="menu-list">
+			<a onclick="up();check();" class="turnUp"><img style="width:30px; height:30px;"src="up.jpg" /></a>
+			<a onclick="left();check();" class="turnLeft"><img style="width:30px; height:30px;"src="left.jpg" /></a>
+			<a onclick="down();check();" class="turnDown"><img style="width:30px; height:30px;"src="down.jpg" /></a>
+            <a onclick="right();check();" class="turnRight"><img style="width:30px; height:30px;"src="right.jpg" /></a>
+		</div>
+	</div>
+	<!-- 代码部分end -->
+	<script>
+	    if (document.querySelector(".float-menu")) {
+	        var plus = document.querySelector(".plus");
+	        var floatMenu = document.querySelector(".float-menu");
+	        plus.addEventListener("click", function () {
+	            floatMenu.className.indexOf("open") > -1 ? floatMenu.className = "float-menu" : floatMenu.className = "float-menu open";
+	        }, false);
+	    }
+	</script>
     </body>
 </html>
