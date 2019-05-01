@@ -6,28 +6,12 @@ body {
     background-repeat:no-repeat;
     
 }
-  #windows {
-        margin: 0 auto;
-        padding: 12px 12px 12px 12px;
-        text-align: center;
-        vertical-align: central;
-        background-color: rgb(163,163,128);
-        z-index: -1;
-        margin: 0px auto;
-        margin-top:20px;
-        width: 80%;
-        height:80%;
-        padding: 12px 12px 12px 12px;
-        text-align: center;
-        vertical-align: central;
-        background-color: rgb(163,163,128);
-        border-radius: 26px;
-    }
+
     div.part {
         text-align: center;
         vertical-align: central;
         background-color: rgb(255,238,147);
-        z-index:0;
+        z-index:10;
     }
     /*div.part1 {
         text-align: center;
@@ -138,7 +122,14 @@ body {
         border: none;
     }
 
-  
+    #windows {
+        margin: 0 auto;
+        padding: 12px 12px 12px 12px;
+        text-align: center;
+        vertical-align: central;
+        background-color: rgb(163,163,128);
+        z-index: -1;
+    }
 
     h1 {
         text-align: center;
@@ -290,6 +281,18 @@ div.button {
 p.formTitle {
     font-size: 20px;
 }
+ #windows {
+            margin: 0px auto;
+            margin-top:20px;
+            width: 390px;
+            height:390px;
+            padding: 12px 12px 12px 12px;
+            text-align: center;
+            vertical-align: central;
+            background-color: rgb(163,163,128);
+            z-index: -1;
+            border-radius: 26px;
+        }
          div.help {
              margin:10px auto;
              margin-top:40px;
@@ -414,6 +417,7 @@ p.formTitle {
             padding: 1vw 1vw;
            
         }
+
         button.menu {
             padding: 1vw;
             margin: 1vw;
