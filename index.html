@@ -107,14 +107,13 @@
             <div class="part"></div>
             <div class="part"></div>
         </div> 
-        <br />
         <div class="button"><a class="hint" >提示</a><a class="playway">游戏玩法</a></div>
         <div class="settings">
             <form>
                     <p class="formTitle">设置</p>
                     <label for="moveMusicValue">按键声音音量</label>
                 <input id="moveMusicValue" type="range" min="0" max="100" value="50" onchange="setMoveMusicValue()"/><span id="showMoveMusicValue">50</span>
-                      <br /><br />
+                      <br />
                     <audio id="moveMusic"controls="controls" style="display:none;">
                         <source src="music/move.ogg" type="auto/ogg" />
                         <source src="music/move.mp3" type="audio/mpeg" />
@@ -122,9 +121,8 @@
                 <br />
                     <label for="backgroundMusicValue">背景音乐音量</label>
                  <input id="backgroundMusicValue" type="range" min="0" max="100" value="50" onchange="setBackgroundMusicValue()"/><span id="showBackgroundMusicValue">50</span>
-                <br /><br /><br /><br />
+                 <br /> 
                  <a id="setStartPause" onclick="startPause()" >打开背景音乐</a>
-                
         <audio id="backgroundMusic" controls loop="loop" style="display:none;">
            <source src="music/backgroundMusic.mp3" type="audio/mpeg">
            <source src="music/backgroundMusic.ogg" type="audio/ogg">
