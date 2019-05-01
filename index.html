@@ -4,7 +4,7 @@
         <title>2048小游戏</title>
         <meta charset="utf-8" />
        
-        <link rel="stylesheet" type="text/css" href="style/style.css" /> 
+        <link rel="stylesheet" type="text/css" href="style/styleMobile.css" /> 
         <link rel="stylesheet" href="style/style1.css"/>
     </head>
     <script src="js/jquery.js"></script>
@@ -121,7 +121,7 @@
                 <br />
                     <label for="backgroundMusicValue">背景音乐音量</label>
                  <input id="backgroundMusicValue" type="range" min="0" max="100" value="50" onchange="setBackgroundMusicValue()"/><span id="showBackgroundMusicValue">50</span>
-                 <br /> 
+                 <br /> <br />
                  <a id="setStartPause" onclick="startPause()" >打开背景音乐</a>
         <audio id="backgroundMusic" controls loop="loop" style="display:none;">
            <source src="music/backgroundMusic.mp3" type="audio/mpeg">
@@ -141,25 +141,5 @@
             <b>操作方法:</b>
                 <p>用w,s,a,d键,悬浮窗控制上下左右。</p>
         </div>
-          <!-- 代码部分begin -->
-	<div class="float-menu">
-		<div class="plus"><div class="cross"></div></div>
-		<div class="menu-list">
-			<a onclick="up();check();" class="turnUp"><img style="width:30px; height:30px;"src="images/up.jpg" /></a>
-			<a onclick="left();check();" class="turnLeft"><img style="width:30px; height:30px;"src="images/left.jpg" /></a>
-			<a onclick="down();check();" class="turnDown"><img style="width:30px; height:30px;"src="images/down.jpg" /></a>
-            <a onclick="right();check();" class="turnRight"><img style="width:30px; height:30px;"src="images/right.jpg" /></a>
-		</div>
-	</div>
-	<!-- 代码部分end -->
-	<script>
-	    if (document.querySelector(".float-menu")) {
-	        var plus = document.querySelector(".plus");
-	        var floatMenu = document.querySelector(".float-menu");
-	        plus.addEventListener("click", function () {
-	            floatMenu.className.indexOf("open") > -1 ? floatMenu.className = "float-menu" : floatMenu.className = "float-menu open";
-	        }, false);
-	    }
-	</script>
     </body>
 </html>
