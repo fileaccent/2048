@@ -274,7 +274,7 @@ div.button {
  
 .finish1{
     position:absolute;
-    top:90vh;
+    top:70%;
     left:50%;
     transform:translate(-50%,-50%);
     -o-transform:translate(-50%,-50%);
@@ -286,8 +286,8 @@ div.button {
 }
 .finish2{
     position:absolute;
-     top:90vh;
-    left:50vw;
+     top:70%;
+    left:50%;
     transform:translate(-50%,-50%);
     -o-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
@@ -297,10 +297,10 @@ div.button {
    
 }
   .excellent{
-        width:60vmin;
-        height:60vmin;
+        width:40vmin;
+        height:40vmin;
         position:absolute;
-   top:60vh;
+   top:50vh;
     left:50vw;
     transform:translate(-50%,-50%);
     -o-transform:translate(-50%,-50%);
@@ -309,10 +309,10 @@ div.button {
  
 }
     .fault{
-       width:60vmin;
-        height:60vmin;
+       width:40vmin;
+        height:40vmin;
         position:absolute;
-   top:60vh;
+   top:50vh;
     left:50vw;
     transform:translate(-50%,-50%);
     -o-transform:translate(-50%,-50%);
@@ -410,11 +410,23 @@ button.setting {
          margin:0.5vmin;
         }
     .excellent {
-        width: 45vmin;
-        height: 45vmin;
+        width: 40vmin;
+        height: 40vmin;
+          position: absolute;
+        top: 53%;
     }
     .fault {
-        width: 45vmin;
-        height: 45vmin;
+        width: 40vmin;
+        height: 40vmin;
+         position: absolute;
+        top: 53%;
+    }
+    .finish1 {
+        position: absolute;
+        top: 80%;
+    }
+    .finish2 {
+        position: absolute;
+        top: 80%;
     }
 }
