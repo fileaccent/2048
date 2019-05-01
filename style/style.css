@@ -249,7 +249,7 @@ div.button {
     input[type="range"] {
     -webkit-appearance: none; /*去除默认样式*/
     margin-top: 42px;
-    background-color: rgb(163,163,128);
+    background-color: lightgreen;
     /*border-radius: 15px;*/
     width: 40% !important;
    -webkit-appearance: none;
@@ -272,7 +272,7 @@ div.button {
   /*background: none repeat scroll 0 0 #5891f5;*/
    background: white;
    border-radius: 25px;
-   border:5px solid rgb(226,219,190);
+   border:5px solid lightgreen;
    /*-webkit-box-shadow: 0 -1px 1px #fc7701 inset;*/
  }
 #setStartPause {
@@ -326,19 +326,6 @@ p.formTitle {
         font-size: 2.5vw;
         font-weight: bolder;
     }
-   /*div.part1 {
-        text-align: center;
-        vertical-align: central;
-        width: 22%;
-        height: 6.6vw;
-        line-height: 6.6vw;
-        margin: 1.5%;
-        float: left;
-        text-align: center;
-        border-radius: 1.4vw;
-        font-size: 2.5vw;
-        font-weight: bolder;
-    }*/ 
     #windows {
         margin: 0 auto;
         width: 30%;
@@ -575,39 +562,12 @@ p.formTitle {
              font-size: 32.5px;
             font-weight:bolder;
         }
-       /*div.part1 {
-            text-align: center;
-            vertical-align: central;
-            width: 85.8px;
-            height:85.8px;
-            line-height: 85.8px;
-            margin: 5.8px;
-            float: left;
-            text-align: center;
-            border-radius:18.2px;
-             font-size: 32.5px;
-            font-weight:bolder;
-        }*/   
+      
         div.button {
            text-align:center;
             padding: 1vw 1vw;
            
         }
-      /*.hint {
-           position:absolute;
-            margin: 0 auto;
-            transform: translate(-250%,0);
-            -o-transform: translate(-250%,0);
-            -moz-transform: translate(-250%,0);
-            -webkit-transform: translate(-250%,0);
-        }.playway {
-           position:absolute;
-            margin: 0 auto;
-            transform: translate(60%,0);
-            -o-transform: translate(60%,0);
-            -moz-transform: translate(60%,0);
-            -webkit-transform: translate(60%,0);
-        }*/  
         
         button.menu {
             padding: 1vw;
@@ -780,24 +740,6 @@ p.formTitle {
             padding: 1vw 1vw;
            
         }
-        /* .hint {
-           position:absolute;
-            margin: 0 auto;
-            transform: translate(-250%,0);
-            -o-transform: translate(-250%,0);
-            -moz-transform: translate(-250%,0);
-            -webkit-transform: translate(-250%,0);
-        }
-        .playway {
-           position:absolute;
-            margin: 0 auto;
-            transform: translate(60%,0);
-            -o-transform: translate(60%,0);
-            -moz-transform: translate(60%,0);
-            -webkit-transform: translate(60%,0);
-        }*/
-       
-
         button.menu {
             padding: 1vw;
             margin: 1vw;

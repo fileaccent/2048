@@ -9,17 +9,12 @@ h1 {
     }
  #windows {
         margin: 0 auto;
-        text-align: center;
-        vertical-align: central;
-        background-color: rgb(163,163,128);
+        background-color:rgb(139,126,102);
         z-index: -1;
         margin: 0px auto;
         margin-top:2%;
-        text-align: center;
-        vertical-align: central;
-        background-color: rgb(163,163,128);
-            border-radius: 5vmin;
-       border:3vmin solid rgb(163,163,128);
+        border-radius: 5vmin;
+        border:2vmin  solid rgb(139,126,102);
         width: 80vmin;
         height: 80vmin;
         position: absolute;
@@ -56,7 +51,7 @@ h1 {
     -o-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
-        background-color: rgb(255,192,159);
+        background-color: powderblue;
         overflow: auto;
         display: none;
         text-align: center;
@@ -79,7 +74,7 @@ h1 {
         font-size:3vmin;
     }
     div.settings {
-        background-color: rgb(255,192,159);
+        background-color: powderblue;
         overflow: auto;
         display: none;
         text-align: center;
@@ -99,9 +94,8 @@ h1 {
     -webkit-transform:translate(-50%,-50%);
         }
     div.score {
-        background-color: rgb(224,211,191);
+        background-color:powderblue;
         text-align: center;
-        border: 1px solid rgb(224,211,191);
         padding: 0px;
         color:rgb(13,23,64);
         font-weight:bolder;
@@ -120,9 +114,8 @@ h1 {
         }
   
     div.maxScore {
-       background-color: rgb(224,211,191);
+       background-color: powderblue;
         text-align: center;
-        border: 1px solid rgb(224,211,191);
         padding:0;
         color:rgb(13,23,64);
         font-weight:bolder;
@@ -147,9 +140,8 @@ h1 {
         max-width:10vmin;
         max-height:14vmin;
         font-size:3vmin; 
-     background-color: rgb(224,211,191);
+     background-color: powderblue;
         text-align: center;
-        border: 1px solid rgb(224,211,191);
         color:rgb(13,23,64);
         font-weight:bolder;
         padding-top:0;
@@ -169,9 +161,8 @@ h1 {
         max-width:15vmin;
         max-height:14vmin;
         font-size:3vmin; 
-     background-color: rgb(224,211,191);
+     background-color:powderblue;
         text-align: center;
-        border: 1px solid rgb(224,211,191);
         color:rgb(13,23,64);
         font-weight:bolder;
         padding-top:0;
@@ -188,9 +179,8 @@ h1 {
          max-width:15vmin;
         max-height:14vmin;
         font-size:3vmin; 
-     background-color: rgb(224,211,191);
+     background-color: powderblue;
         text-align: center;
-        border: 1px solid rgb(224,211,191);
         color:rgb(13,23,64);
         font-weight:bolder;
         padding-top:0;
@@ -202,16 +192,6 @@ h1 {
         }
     form.settings {
         border: none;
-    }
-    a {
-        text-decoration: none;
-        background-color: rgb(226,219,190);
-       font-size: 5vmin;
-       padding: 2vmin;
-        color: white;
-        border-radius: 2vmin;
-        cursor: pointer;
-       margin: 2vmin 2vmin; 
     }
 .hint {
     position: absolute;
@@ -231,6 +211,16 @@ h1 {
     -moz-transform: translate(-200%,0);
     -webkit-transform: translate(-200%,0);
 }
+ a {
+        text-decoration: none;
+        background-color:cadetblue;
+       font-size: 5vmin;
+       padding: 2vmin;
+        color: white;
+        border-radius: 2vmin;
+        cursor: pointer;
+       margin: 2vmin 2vmin; 
+    }
       a:link {
             color: rgb(226,219,190);
             background-color: white;
@@ -242,9 +232,14 @@ h1 {
             background-color: white;
             border: 1px solid rgb(226,219,190);
         }
-
+#setStartPause {
+    margin-top: 2vmin;
+    padding:1vmin;
+    font-size:10px;
+    background-color:cadetblue;
+}
     button {
-        background: rgb(226,219,190);
+        background: cadetblue;
         font-size: 5vmin;
         padding: 2vmin;
         color: white;
@@ -280,9 +275,8 @@ div.button {
     -o-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
-  
-    z-index:10;
-   
+  display:none;
+    z-index:10;   
 }
 .finish2{
     position:absolute;
@@ -292,7 +286,7 @@ div.button {
     -o-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
- 
+  display:none;
     z-index:10;
    
 }
@@ -306,6 +300,7 @@ div.button {
     -o-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
+  display:none;
  
 }
     .fault{
@@ -318,17 +313,17 @@ div.button {
     -o-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
-
+  display:none;
 }
     /*设置range的样式*/
     input[type="range"] {
     -webkit-appearance: none; /*去除默认样式*/
     margin-top: 4.2vmin;
-    background-color: rgb(163,163,128);
+    background-color: lightgreen;
     /*border-radius: 15px;*/
     width: 20vmin !important;
    -webkit-appearance: none;
-    height:2vmin;
+    height:0.5vmin;
    padding: 0;
    border: none;
   outline:none;
@@ -347,11 +342,12 @@ div.button {
   /*background: none repeat scroll 0 0 #5891f5;*/
    background: white;
    border-radius: 4vmin;
-   border:1vmin solid rgb(226,219,190);
+   border:1vmin solid lightgreen;
    /*-webkit-box-shadow: 0 -1px 1px #fc7701 inset;*/
  }
 #setStartPause {
-    font-size:4vmin;
+    font-size:2vmin;
+    background-color:cadetblue;
 }
 p.formTitle {
     font-size:4vmin;
@@ -392,7 +388,6 @@ button.setting {
         position: absolute;
         top: 60vh;
         left: 50%;
-         border:2vmin solid rgb(163,163,128);
         transform: translate(-50%,-50%);
         -o-transform: translate(-50%,-50%);
         -moz-transform: translate(-50%,-50%);
