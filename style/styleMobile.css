@@ -42,7 +42,7 @@ body {
         }
     div.help { 
         position:absolute;
-            top: 60%;
+            top: 40%;
             left:50%;
             transform:translate(-50%,-50%);
     -o-transform:translate(-50%,-50%);
@@ -55,7 +55,7 @@ body {
         border: 0.3vw solid rgb(163,163,128);
         border-radius: 26px;
             width: 800px;
-            height:600px;
+            height:650px;
         }  
     p.helpText {
         text-indent: 2rem;
