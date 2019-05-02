@@ -1,4 +1,4 @@
-if (!$('.settings').is(':hidden') && $('.help').is(':hidden')) {
+if ($('div.settings').is(':hidden') && $('div.help').is(':hidden')) {
     var startx, starty;
     //»ñµÃ½Ç¶È
     function getAngle(angx, angy) {
