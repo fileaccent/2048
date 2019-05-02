@@ -1,4 +1,4 @@
-if ($('div.settings').is(':hidden') && $('div.help').is(':hidden')) {
+
     var startx, starty;
     //»ñµÃ½Ç¶È
     function getAngle(angx, angy) {
@@ -59,4 +59,3 @@ if ($('div.settings').is(':hidden') && $('div.help').is(':hidden')) {
             default:
         }
     }, false);
-}
