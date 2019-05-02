@@ -17,7 +17,7 @@ h1 {
         border:2vmin  solid rgb(139,126,102);
         width: 80vmin;
         height: 80vmin;
-        position: absolute;
+        position: fixed;
         top: 60vh;
         left: 50%;
         transform: translate(-50%,-50%);
