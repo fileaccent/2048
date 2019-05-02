@@ -1,5 +1,4 @@
-
-    var startx, starty;
+ var startx, starty;
     //»ñµÃ½Ç¶È
     function getAngle(angx, angy) {
         return Math.atan2(angy, angx) * 180 / Math.PI;
