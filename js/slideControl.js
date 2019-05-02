@@ -1,4 +1,4 @@
-document.addEventListener('touchstart', function (event) {
+document.addEventListener('touchmove', function (event) {
     event.preventDefault();
 });
 var startx, starty;
