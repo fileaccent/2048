@@ -1,4 +1,4 @@
-
+if ($("div.settings").toggle().is(':hidden') && $("div.help").toggle().is(':hidden')) {
     document.addEventListener('touchmove', function (event) {
         event.preventDefault();
     });
@@ -43,27 +43,28 @@
         endx = e.changedTouches[0].pageX;
         endy = e.changedTouches[0].pageY;
         var direction = getDirection(startx, starty, endx, endy);
-        if ($("div.settings").toggle().is(':hidden') && $("div.help").toggle().is(':hidden'))
-            switch (direction) {
-                case 0:
-                    ;
-                    break;
-                case 1:
-                    up(); check();
-                    break;
-                case 2:
-                    down(); check();
-                    break;
-                case 3:
-                    left(); check();
-                    break;
-                case 4:
-                    right(); check();
-                    break;
-                default:
-            }
+
+        switch (direction) {
+            case 0:
+                ;
+                break;
+            case 1:
+                up(); check();
+                break;
+            case 2:
+                down(); check();
+                break;
+            case 3:
+                left(); check();
+                break;
+            case 4:
+                right(); check();
+                break;
+            default:
+        }
 
     }, false);
+}
     var overscroll = function (el) {
         el.addEventListener('touchstart', function () {
             var top = el.scrollTop;

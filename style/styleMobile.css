@@ -53,7 +53,7 @@ h1 {
     -webkit-transform:translate(-50%,-50%);
         background-color: powderblue;
         overflow: auto;
-        visibility:hidden;
+       display:none;
         text-align: center;
         border:2px solid rgb(163,163,128);
         border-radius: 25px;
@@ -76,7 +76,7 @@ h1 {
     div.settings {
         background-color: powderblue;
         overflow: auto;
-        visibility:hidden;
+        display:none;
         text-align: center;
         border: 1px solid rgb(163,163,128);
         border-radius: 4px;
