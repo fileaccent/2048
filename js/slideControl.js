@@ -64,7 +64,6 @@ if ($("div.settings").toggle().is(':hidden') && $("div.help").toggle().is(':hidd
         }
 
     }, false);
-}
     var overscroll = function (el) {
         el.addEventListener('touchstart', function () {
             var top = el.scrollTop;
@@ -77,8 +76,10 @@ if ($("div.settings").toggle().is(':hidden') && $("div.help").toggle().is(':hidd
             }
         });
     }
+
     el.addEventListener('touchmove', function (evt) {
         if (el.offsetHeight < el.scrollHeight) {
             evt._isScroller = true;
         }
     });
+}
