@@ -1,7 +1,7 @@
-if ($("div.settings").toggle().is(':hidden') && $("div.help").toggle().is(':hidden')) {
-    document.addEventListener('touchmove', function (event) {
+ document.addEventListener('touchmove', function (event) {
         event.preventDefault();
-    });
+ });
+ if ($("div.settings").toggle().is(':hidden') && $("div.help").toggle().is(':hidden')) {
     var startx, starty;
     //»ñµÃ½Ç¶È
     function getAngle(angx, angy) {
