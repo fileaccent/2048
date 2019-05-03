@@ -43,7 +43,7 @@
         endx = e.changedTouches[0].pageX;
         endy = e.changedTouches[0].pageY;
         var direction = getDirection(startx, starty, endx, endy);
-        if ($("div.settings").css("display") == "none" && $("div.help").css("display") == "none")
+        if ($("div.settings").toggle().is(':hidden') && $("div.help").toggle().is(':hidden'))
             switch (direction) {
                 case 0:
                     ;
