@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <title>读取数据</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+  
+    $.ajax({
+        url: "http://api.juheapi.com/japi/toh",
+        type: "get",
+        params: { "contentType": "application/json;charset=utf-8" },
+        data: {
+            "key": "f87acf24e05151de0f439271154d0c9d",
+            "v": "1.0", "month": "11", "day": "1"
+        },
+        dataType: "jsonp",
+        success: function (data) {
+            var data = eval("(" + data + ")");
+            document.getElementById("demo").innerHTML =
+         "id=" + data.result[0]._id + "<br/>" +
+         "title=" + data.result[0].title + "<br/>" +
+         "pic=" + data.result[0].pic + "<br/>" +
+         "year=" + data.result[0].year + "<br/>" +
+         "month=" + data.result[0].month + "<br/>" +
+         "day=" + data.result[0].day + "<br/>" +
+         "des=" + data.result[0].des + "<br/>" +
+         "lunar=" + data.result[0].lunar + "<br/>";
+        }
+    });
+</script>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+</html>

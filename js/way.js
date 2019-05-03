@@ -162,32 +162,6 @@ function getScore()
         $("div.maxScore p").eq(1).text(num2);
     else;
         }
-function setColor(a){
-    if(a.text==""||a.text==0)
-        a.css({backgroundColor:rgb(153, 153, 0)});
-    if(a.text==2)
-        a.css({backgroundColor:	rgb(255, 214, 153)});
-    if(a.text==4)
-        a.css({backgroundColor:	rgb(255, 255, 115)});
-    if(a.text==8)
-        a.css({backgroundColor:	rgb(223, 255, 128)});
-    if(a.text==16)
-        a.css({backgroundColor:	rgb(128, 255, 128)});
-    if(a.text==32)
-        a.css({backgroundColor:	rgb(128, 255, 128)});
-    if(a.text==64)   
-        a.css({backgroundColor:	rgb(144, 239, 215)});
-    if(a.text==128)
-        a.css({backgroundColor: rgb(0, 204, 204)});
-    if(a.text==256)
-        a.css({backgroundColor: rgb(0, 191, 255)});
-    if(a.text==512)
-        a.css({backgroundColor:	rgb(223, 128, 255)});
-    if(a.text==1024)
-        a.css({backgroundColor:	rgb(223, 128, 255)});
-    if(a.text==2048)
-        a.css({backgroundColor:	rgb(255, 128, 191)});
-}
 function setMoveMusicValue() {
     document.getElementById("moveMusic").volume = document.getElementById("moveMusicValue").value / 100;
     document.getElementById("moveMusic").muted = false;
@@ -238,54 +212,6 @@ function clearRoundTime() {
     clearInterval(myVar2);
     document.getElementById("roundTimeValue").innerHTML = "0 秒";
 }
-function getNumberBackgroundColor(number) {
-    switch (number) {
-    case 2:
-        return "#eee4da";
-        break;
-    case 4:
-        return "#eee4da";
-        break;
-    case 8:
-        return "#f26179";
-        break;
-    case 16:
-        return "#f59563";
-        break;
-    case 32:
-        return "#f67c5f";
-        break;
-    case 64:
-        return "#f65e36";
-        break;
-    case 128:
-        return "#edcf72";
-        break;
-    case 256:
-        return "#edcc61";
-        break;
-    case 512:
-        return "#9c0";
-        break;
-    case 1024:
-        return "#3365a5";
-        break;
-    case 2048:
-        return "#09c";
-        break;
-    case 4096:
-        return "#a6bc";
-        break;
-    case 8192:
-        return "#93c";
-        break;
-    }
-    return "black";
-}
 
-function getNumberColor(number) {
-    if (number <= 4){
-        return "#776e65";
-    }
-    return "white";
-}
+
+ 

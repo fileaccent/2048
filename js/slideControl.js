@@ -1,7 +1,8 @@
-document.addEventListener('touchmove', function (event) {
-    event.preventDefault();
-});
-var startx, starty;
+if ($("#settings").css("display") == none && $("#help").css("display") == none) {
+    document.addEventListener('touchmove', function (event) {
+        event.preventDefault();
+    });
+    var startx, starty;
     //»ñµÃ½Ç¶È
     function getAngle(angx, angy) {
         return Math.atan2(angy, angx) * 180 / Math.PI;
@@ -78,4 +79,4 @@ var startx, starty;
             }
         });
     }
-    
+}
