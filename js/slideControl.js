@@ -1,7 +1,6 @@
  document.addEventListener('touchmove', function (event) {
         event.preventDefault();
  });
- if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
     var startx, starty;
     //»ñµÃ½Ç¶È
     function getAngle(angx, angy) {
@@ -49,16 +48,24 @@
                 ;
                 break;
             case 1:
-                up(); check();
+                if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
+                    up(); check();
+                }
                 break;
             case 2:
-                down(); check();
+                if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
+                    down(); check();
+                }
                 break;
             case 3:
-                left(); check();
+                if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
+                    left(); check();
+                }
                 break;
             case 4:
-                right(); check();
+                if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
+                    right(); check();
+                }
                 break;
             default:
         }
@@ -82,4 +89,3 @@
             evt._isScroller = true;
         }
     });
- //}
