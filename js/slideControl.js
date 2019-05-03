@@ -49,22 +49,22 @@
                 break;
             case 1:
                 if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
-                    up(); check();
+                    readyBack(); up(); check();
                 }
                 break;
             case 2:
                 if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
-                    down(); check();
+                    readyBack(); down(); check();
                 }
                 break;
             case 3:
                 if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
-                    left(); check();
+                    readyBack(); left(); check();
                 }
                 break;
             case 4:
                 if ($("div.settings").is(':hidden') && $("div.help").is(':hidden')) {
-                    right(); check();
+                    readyBack(); right(); check();
                 }
                 break;
             default:
