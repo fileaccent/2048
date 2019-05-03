@@ -45,15 +45,9 @@
             } $("div.score p").eq(1).text("0");
             clearGameTime(); setGameTime();
             clearRoundTime(); setRoundTime();
-
+          //  alert($("div.settings").css("display") + " " + $("div.help").css("display"));
         }
-        if (document.querySelector(".float-menu")) {
-            var plus = document.querySelector(".plus");
-            var floatMenu = document.querySelector(".float-menu");
-            plus.addEventListener("click", function () {
-                floatMenu.className.indexOf("open") > -1 ? floatMenu.className = "float-menu" : floatMenu.className = "float-menu open";
-            }, false);
-        }
+       
     </script>
     <body onload="num();loadXMLDoc();" ><!---->
        

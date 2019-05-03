@@ -1,4 +1,4 @@
-if ($("#settings").css("display") == none && $("#help").css("display") == none) {
+if ($("div.settings").css("display") == none && $("div.help").css("display") == none) {
     document.addEventListener('touchmove', function (event) {
         event.preventDefault();
     });
@@ -73,10 +73,11 @@ if ($("#settings").css("display") == none && $("#help").css("display") == none) 
                 el.scrollTop = top - 1;
             }
         });
-        el.addEventListener('touchmove', function (evt) {
+       
+    }
+}
+el.addEventListener('touchmove', function (evt) {
             if (el.offsetHeight < el.scrollHeight) {
                 evt._isScroller = true;
             }
         });
-    }
-}

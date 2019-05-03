@@ -15,7 +15,6 @@
         },
         dataType: "jsonp",
         success: function (data) {
-            var data = eval("(" + data + ")");
             document.getElementById("demo").innerHTML =
          "id=" + data.result[0]._id + "<br/>" +
          "title=" + data.result[0].title + "<br/>" +
@@ -31,5 +30,6 @@
 </head>
 <body>
     <p id="demo"></p>
+   
 </body>
 </html>

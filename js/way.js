@@ -213,5 +213,4 @@ function clearRoundTime() {
     document.getElementById("roundTimeValue").innerHTML = "0 秒";
 }
 
-
  
