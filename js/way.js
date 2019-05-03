@@ -1,4 +1,5 @@
 ﻿var i, j, k, m, d, num, n, flag, p, myVar1, myVar2;
+var back = new Array();
 var round = 0;
 var warning = 0;
 var sequares = 0;
@@ -79,27 +80,37 @@ $(document).ready(function () {
     });
 
 });
-
+function readyBack() {
+    for (var i = 0; i < 16; i++) {
+        back[i] = $("div.part").eq(i).text(); 
+    }
+}
+$(document).ready(function () {
+    $(".hint").click(function () {
+        for (var i = 0; i < 16; i++)
+            $("div.part").eq(i).text(back[i]);
+    });
+});
 $(document).keydown(function (event) {
         var keyNum = event.which;   //获取键值 
         if (keyNum == 100 || keyNum == 68) {
-            right(); check(); 
+           readyBack(); right(); check(); 
            
             $("#roundNumValue").text("第" + round + "回");
         }
         else if (keyNum == 115 || keyNum == 83) {
 
-            down(); check(); 
+           readyBack(); down(); check(); 
         
             $("#roundNumValue").text("第" + round + "回");
         }
         else if (keyNum == 87 || keyNum == 119) {
-            up(); check(); 
+            readyBack(); up(); check();
       
             $("#roundNumValue").text("第" + round + "回");
         }
         else if (keyNum == 65 || keyNum == 97) {
-            left(); check(); 
+             readyBack(); left(); check();
         
             $("#roundNumValue").text("第" + round + "回");
         }
