@@ -104,7 +104,7 @@ h1 {
         padding-right:1vmin;
         float: left;
         position: absolute;
-        top: 2vh;left:1vw;
+        top: 2vmin;left:1vw;
         border-radius:2vmin;
         font-size:3vmin; 
         
@@ -124,7 +124,7 @@ h1 {
         padding-right:1vmin;
         float: left;
         position: absolute;
-       top: 2vh;left:12vw;
+       top: 2vmin;left:12vw;
          border-radius:15%;
         border-radius:2vmin;
         font-size:3vmin; 

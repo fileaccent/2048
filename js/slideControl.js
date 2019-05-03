@@ -1,4 +1,4 @@
-//if ($("div.settings").css("display") == none && $("div.help").css("display") == none) {
+
     document.addEventListener('touchmove', function (event) {
         event.preventDefault();
     });
@@ -43,24 +43,26 @@
         endx = e.changedTouches[0].pageX;
         endy = e.changedTouches[0].pageY;
         var direction = getDirection(startx, starty, endx, endy);
-        switch (direction) {
-            case 0:
-                ;
-                break;
-            case 1:
-                up(); check();
-                break;
-            case 2:
-                down(); check();
-                break;
-            case 3:
-                left(); check();
-                break;
-            case 4:
-                right(); check();
-                break;
-            default:
-        }
+        if ($("div.settings").css("display") == none && $("div.help").css("display") == none)
+            switch (direction) {
+                case 0:
+                    ;
+                    break;
+                case 1:
+                    up(); check();
+                    break;
+                case 2:
+                    down(); check();
+                    break;
+                case 3:
+                    left(); check();
+                    break;
+                case 4:
+                    right(); check();
+                    break;
+                default:
+            }
+
     }, false);
     var overscroll = function (el) {
         el.addEventListener('touchstart', function () {
@@ -73,11 +75,9 @@
                 el.scrollTop = top - 1;
             }
         });
-       
     }
-//}
-el.addEventListener('touchmove', function (evt) {
-            if (el.offsetHeight < el.scrollHeight) {
-                evt._isScroller = true;
-            }
-        });
+    el.addEventListener('touchmove', function (evt) {
+        if (el.offsetHeight < el.scrollHeight) {
+            evt._isScroller = true;
+        }
+    });
