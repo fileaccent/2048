@@ -6,5 +6,5 @@
 5.api未完成.
 6.提示未添加.
          除了上述问题总体上还是很满意的,也搞到了
-         网址:'https://fileaccent.github.io/2048/'
+         网址:https://fileaccent.github.io/2048/
          手机,电脑均可用也是对自己二周以来的成果总结了!
